@@ -90,7 +90,10 @@
                 src: data
                 dest: /var/lib/mysql
   tasks:
-    - debug:
-        msg: "Run your tests here by importing the respective tasks"
-    #- name: Generate Server Block Terraform file
-    #  import_tasks: "../tasks/steps/generate-serverblock-tf.yml"
+    - block:
+        - debug:
+            msg: "Run your tests here by importing the respective tasks"
+        #- name: Generate Server Block Terraform file
+        #  import_tasks: "../tasks/steps/generate-serverblock-tf.yml"
+      vars:
+        role_path: ".."
