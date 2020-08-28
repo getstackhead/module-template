@@ -31,7 +31,7 @@ env:
   # todo: set your role name here
   ROLE_NAME: <vendor>.stackhead_<type>_<name>
   # todo: software to use as webserver
-  WEBSERVER: getstackhead.stackhead_webserver_nginx
+  WEBSERVER: getstackhead.stackhead_webserver_nginx # if your module is a webserver module, set its name here
   # todo: adjust domain name
   DOMAIN_NAME: "pr-${{ github.run_id }}-myname"
   # domain name
@@ -105,8 +105,8 @@ jobs:
         ipaddress: ${{ steps.setup_server.outputs.hcloud_server_created_ipv4 }}
         domain: '${{ env.DOMAIN_NAME }}.${{ env.DOMAIN_SUFFIX }}'
         domain2: 'sub.${{ env.DOMAIN_NAME }}.${{ env.DOMAIN_SUFFIX }}'
-        webserver: 'getstackhead.stackhead_webserver_nginx' # if your module is a webserver module, set its name here
-        rolename: '<vendor>.stackhead_<type>_<NAME>'
+          webserver: '${{ env.WEBSERVER }}'
+          rolename: '${{ env.ROLE_NAME }}'
     - name: Remove DNS record
       uses: saitho/delete-dns-record@saitho-patch-1
       if: always()
