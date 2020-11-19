@@ -11,4 +11,4 @@
         #- name: Generate Server Block Terraform file
         #  import_tasks: "../tasks/steps/generate-serverblock-tf.yml"
       vars:
-        role_path: ".."
+        module_role_path: ".."

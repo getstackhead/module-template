@@ -7,6 +7,11 @@
   debug:
     msg: "{{ stackhead__tf_project_folder }}"
 
+#- name: Example template usage (prefer "module_role_path" over "role_path"!)
+#  template:
+#    src: "{{ module_role_path|default(role_path) }}/templates/my-resource.tf.j2"
+#    dest: "{{ stackhead__tf_project_folder }}/my-resource.tf"
+
 # If you need to create SSL certificates for the domain
 #- include_tasks: "{{ stackhead__roles }}/stackhead_module_api/tasks/ssl-certificate.yml"
 
