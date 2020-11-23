@@ -16,7 +16,7 @@ Install it via `ansible-galaxy`:
 ansible-galaxy install [vendor].stackhead_[type]_[name]
 ```
 
-In order to use Nginx with [StackHead](https://get.stackhead.io), set `stackhead__[type]` it in your inventory file:
+In order to use [name] with [StackHead](https://get.stackhead.io), set `stackhead__[type]` it in your inventory file:
 
 ```yaml
 # inventory for integration test
