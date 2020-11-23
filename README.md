@@ -1,4 +1,4 @@
-This is a template for a [StackHead Module](https://docs.stackhead.io/technical-documentation/modules).
+This is a template for a [StackHead Module](https://docs.stackhead.io/stackhead-modules/stackhead-modules).
 
 Make sure to adjust it to your needs.
 
