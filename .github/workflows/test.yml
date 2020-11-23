@@ -15,17 +15,10 @@ name: Test
 # Also create a label "action/integration-test"
 # Only pull requests with that label will be integration tested
 
-# disable GH action for template
-# remove and uncommment below "on" block when using in production
 on:
-  push:
-    branches-ignore:
-      - '**'
-
-#on:
-#  pull_request:
-#    types: [opened, labeled, unlabeled, synchronize]
-#    branches: [master]
+  pull_request:
+    types: [opened, labeled, unlabeled, synchronize]
+    branches: [master]
 
 env:
   # todo: set your role name here
